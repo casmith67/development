@@ -1,0 +1,73 @@
+/*
+    Layout/background
+*/
+body {
+    line-height: 1;
+    background: rgba(100, 135, 200, 0.3);
+    color: #fff;
+}
+
+/* 
+    Container
+*/
+.container {
+    margin: 0 auto;
+}
+
+/* 
+    Buttons 
+*/
+.button-container {
+    display: grid;
+    grid-template: 1fr / repeat(2, 30%);
+    grid-gap: 30px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btn {
+    font-size: 1em;
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid #a000df;
+    border-radius: 3px;
+    color: #fff;
+    padding: 10px;
+    transition: 1s;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #a000df;
+    color: #000000;
+    border: none;
+}
+
+/*
+    Main Layout
+*/
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+    line-height: 25px;
+    text-align: center;
+}
+
+.main .bg {
+    background: url("../img/background.png") center center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: .5;
+}
