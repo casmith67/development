@@ -94,3 +94,25 @@ body {
     line-height: 25px;
     text-align: center;
 }
+
+/*
+    Contact Form
+*/
+
+.contact-form {
+    justify-content: center;
+}
+
+.contact-form label {
+    margin-left: 50%;
+    color: black;
+}
+
+.contact-form input {
+}
+
+.btn--submit {
+    align-content: center;
+    width: 20%;
+    margin-top: 20px;
+}
