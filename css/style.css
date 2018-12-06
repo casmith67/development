@@ -100,7 +100,13 @@ body {
 */
 
 .contact-form {
+    display: grid;
+    grid-template: 1fr / repeat(2, 1fr);
     justify-content: center;
+    margin-top: 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+    grid-gap: 5px;
 }
 
 .contact-form label {
@@ -109,6 +115,7 @@ body {
 }
 
 .contact-form input {
+    width: 45%;
 }
 
 .btn--submit {

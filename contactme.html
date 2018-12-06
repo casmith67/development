@@ -18,17 +18,18 @@
             <div class="bg"></div>
             <div class="container">
                 <h1>Leave your comments down below!</h1>
-                <form class="contact-form">
+                <form class="contact-form" method="post" action="submit.php" id="contact-form">
 
                     <label>Name: </label>
-                    <input type="text" name="name">
+                    <input type="text" name="name" required="required"> 
                     <label>Email: </label>
-                    <input type="email" name="email">
+                    <input type="email" name="email" required="required">
                     <label>Comments: </label>
-                    <input type="text" name="comments">
+                    <input type="text" name="comments" required="required">
                     <br>
-                    <input name="submit" type="submit" class="btn btn--submit" value="Submit">
+
                 </form> <!-- /contact-form -->
+                <input type="submit" form="contact-form" class="btn btn--submit"></a>
             </div> <!-- /container -->
         </div> <!-- /main -->
     </body>

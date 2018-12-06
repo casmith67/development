@@ -11,20 +11,51 @@
 
         <link href="css/style.css" type="text/css" rel="stylesheet">
 
-        <title>Login Page</title>
+        <title>Input submitted!</title>
     </head>
 
     <body>
         <div class="main">
             <div class="bg"></div>
-            <div class="container">
-                <h1>You've reached our login page</h1>
-                <p>This is currently under development, but this page will be used for you to conviniently login!</p>
-                <div class="button-container">
-                    <a href="index.html" class="btn btn--home">Home</a>
-                    <a href="login.html" class="btn btn--login">Login</a>
-                </div> <!-- /button-container -->
-            </div> <!-- /container -->
+            <?php
+
+                use PHPMailer\PHPMailer\PHPMailer;
+
+                require 'vendor/autoload.php';
+
+                $mail = new PHPMailer;
+
+                $mail->IsSMTP();
+
+                $mail->Host = "smtp.gmail.com";
+                $mail->Port = 587;
+
+                $mail->SMTPAuth = true;
+                $mail->Username = 'blizzardwizard67@gmail.com';
+                $mail->Password = 'basketballfan11';
+
+                $mail->SMTPSecure = 'tls';
+
+                $mail->Subject = "You've got mail!";
+
+                $mail->addAddress('blizzardwizard67@gmail.com');
+
+                $sender = $_POST["email"];
+                $name = $_POST["name"];
+                $comment = $_POST['comments'];
+                $comment = wordwrap($comment, 70);
+
+                $mail->From = $sender;
+                $mail->FromName = $name;
+                $mail->Body = $comment;
+
+                if (!$mail->send()) {
+                    echo 'Message not sent.' . $mail->ErrorInfo;
+                }
+        
+                echo '<h1>Thank you for your input, ' . $_POST["name"] . '!';
+                echo '<p>Your comments have been submitted.';
+            ?>
         </div> <!-- /main -->
 
         <!-- JavaScript includes -->
