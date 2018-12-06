@@ -1,0 +1,144 @@
+html {
+    scroll-behavior: smooth;
+}
+ 
+/*
+    Layout/background
+*/
+body {
+    line-height: 1;
+    background: rgba(100, 135, 200, 0.3);
+    color: #fff;
+}
+ 
+/*
+    Containers
+*/
+.container {
+    margin: 0 auto;
+}
+ 
+.button-container {
+    display: grid;
+    grid-template: 1fr / repeat(2, 30%);
+    grid-gap: 30px;
+    justify-content: center;
+    margin-top: 30px;
+}
+ 
+.contact-container {
+    width: 20%;
+}
+ 
+/* Utility classes */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+ 
+/*
+    Buttons
+*/
+.btn {
+    font-size: 1em;
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid #a000df;
+    border-radius: 3px;
+    color: #fff;
+    padding: 10px;
+    transition: 1s;
+    text-decoration: none;
+}
+ 
+.button-aboutme-container {
+    display: grid;
+    grid-template: 1fr / repeat(1, 20%);
+    justify-content: center;
+    margin-top: 30px;
+}
+ 
+.btn:hover {
+    background: #a000df;
+    color: #000000;
+    border: none;
+}
+ 
+/*
+    Main Layout
+*/
+.main {
+    z-index: 1;
+    line-height: 25px;
+    display: grid;
+    grid-template: repeat(3, 1fr) / auto;
+    justify-items: center;
+    align-self: center;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0;
+}
+ 
+.main h2 {
+    align-self: center;
+}
+ 
+
+.main .bg {
+    background: url("../img/background.png");
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: .5;
+}
+ 
+.aboutme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+    line-height: 25px;
+    text-align: center;
+}
+ 
+/*
+    Contact Form
+*/
+ 
+.contact-form {
+    display: grid;
+    grid-template: 1fr / repeat(2, 1fr);
+    margin-top: 0px;
+    border: 2px solid rgb(181, 93, 199, 0.3);
+    border-radius: 10px;
+    grid-gap: 5px;
+    border-bottom: 1px solid #000;
+}
+ 
+.contact-form label {
+    margin-top: 5px;
+    color: black;
+}
+ 
+.contact-form input {
+    margin-top: 5px;
+    width: 80%;
+    border: 2px solid #ccc;
+}
+ 
+.btn--submit {
+    align-content: center;
+    width: 20%;
+    margin-top: 20px;
+}
