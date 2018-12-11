@@ -9,14 +9,41 @@ body {
     line-height: 1;
     background: rgba(100, 135, 200, 0.3);
     color: #fff;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* 
-    Container
+    Containers
 */
 .container {
     margin: 0 auto;
 }
+
+
+.aboutme {
+    background: rgb(124, 122, 122);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+    line-height: 25px;
+    text-align: center;
+}
+
+.contact-form {
+    display: grid;
+    box-sizing: border-box;
+    grid-template: 1fr 1fr 1fr / repeat(2, 1fr);
+    margin-top: 5px; 
+    border: 2px solid black;
+    border-bottom: 3px solid black;
+    border-radius: 10px;
+    grid-gap: 8px;
+}
+
 
 /* 
     Buttons 
@@ -38,13 +65,6 @@ body {
     padding: 10px;
     transition: 1s;
     text-decoration: none;
-}
-
-.button-aboutme-container {
-    display: grid;
-    grid-template: 1fr / repeat(1, 20%);
-    justify-content: center;
-    margin-top: 30px;
 }
 
 .btn:hover {
@@ -84,32 +104,9 @@ body {
     opacity: .5;
 }
 
-.aboutme {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 100vh;
-    position: relative;
-    z-index: 1;
-    line-height: 25px;
-    text-align: center;
-}
-
 /*
     Contact Form
 */
-
-.contact-form {
-    display: grid;
-    box-sizing: border-box;
-    grid-template: 1fr 1fr 1fr / repeat(2, 1fr);
-    margin-top: 5px; 
-    border: 2px solid black;
-    border-bottom: 3px solid black;
-    border-radius: 10px;
-    grid-gap: 8px;
-}
 
 .contact-form label, .contact-form input {
     position: relative;
@@ -130,6 +127,13 @@ body {
     align-content: center;
     width: 20%;
     margin-top: 20px;
+}
+
+/*
+    About Me
+*/
+.aboutme hr {
+    background: black;
 }
 
 /*
